@@ -1,8 +1,8 @@
 
 
-#H1 Assignment 1
+# Assignment 1
 
-Q&A:
+## Q&A:
 
 **Q1:** Compare the global MIPS rating to the program-dependent MIPS ratings. Com-
 ment on your findings.
@@ -19,6 +19,8 @@ mance indicator. Does your simulation confirm this? Explain!
 
 From the simulation we can clearly see that the second problem applies. On each computer performs differently for each application. For example program A runs better on computer 2 then on computer 1 but program C runs better on computer 1 then on computer 2. Therefore it is hard to compare the computers with each other based on MIPS Rating. It really depends on what application you are running. 
 
+
+## Output
 ---- computer 1 ----
 Clock rate	: 1 [GHz]
 CPI Arith	: 2 [cpi]
