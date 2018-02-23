@@ -44,9 +44,10 @@ int main()
 		// iterate over Program objects in the list
 		for (prog_it = ProgramList.begin(); prog_it != ProgramList.end(); ++prog_it)
 		{
-			std::cout << "MIPS Program "
+			std::cout << "MIPS, ExecTime Program "
 					<< (char) (0x41 + std::distance(ProgramList.begin(), prog_it)) << "\t\t: "
-					<< pc_it->calculateMIPS(*prog_it) << "\n";
+					<< pc_it->calculateMIPS(*prog_it) << "\t"
+					<< pc_it->calculateExecutionTime(*prog_it) << "\n";
 		}
 		std::cout << "\n\n";
 	}
