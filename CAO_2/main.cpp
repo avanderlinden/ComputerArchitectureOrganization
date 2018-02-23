@@ -1,15 +1,28 @@
-/*
- * main.cpp
- *
- *  Created on: Feb 16, 2018
- *      Author: Alex van der Linden
- */
+#include "simulator.h"
+#include "program.h"
+#include "registers.h"
 
-#include <iostream>
-
-
-int main()
+void loadProgram (Program *program)
 {
-	std::cout << "hello \n";
+	program->appendInstruction (new OriInstruction (1, 0, 12));
+	program->appendInstruction (new OriInstruction (2, 0, 4));
+	program->appendInstruction (new OriInstruction (3, 0, 1));
+	program->appendInstruction (new AddInstruction (4, 4, 1));
+	program->appendInstruction (new SubInstruction (2, 2, 3));
+	program->appendInstruction (new BrneInstruction (2, 0, -3));
 }
 
+
+int main (void)
+{
+	Registers *registers	= new Registers ();
+	Program	*program	= new Program ();
+
+	loadProgram (program);
+
+	Simulator theSimulator = Simulator (registers, program);
+
+	theSimulator.ui ();
+
+	return 0;
+}
