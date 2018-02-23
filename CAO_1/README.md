@@ -21,6 +21,7 @@ From the simulation we can clearly see that the second problem applies. On each 
 
 
 ## Output
+```
 ---- computer 1 ----
 Clock rate	: 1 [GHz]
 CPI Arith	: 2 [cpi]
@@ -58,3 +59,5 @@ Global MIPS Rating	: 571.429
 MIPS Program A		: 918.367
 MIPS Program B		: 571.429
 MIPS Program C		: 538.462
+
+```
