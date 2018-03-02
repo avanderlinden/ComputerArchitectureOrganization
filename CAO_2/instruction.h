@@ -26,7 +26,7 @@ public:
     : Instruction(regNumA, regNumB, regNumC) {}
     virtual ~AddInstruction(void) {}
 
-    void disassemble(void){/* TBD */}
+    void disassemble(void);
     int execute(Registers *reg);
 };
 
@@ -36,7 +36,7 @@ public:
     : Instruction(regNumA, regNumB, regNumC) {}
     ~SubInstruction(void) {}
 
-    void disassemble(void){/* TBD */}
+    void disassemble(void);
     int execute(Registers *reg);
 };
 class OriInstruction : public Instruction {
@@ -45,7 +45,7 @@ public:
     : Instruction(regNumA, regNumB, regNumC){}
     ~OriInstruction(void) {}
 
-    void disassemble(void){/* TBD */}
+    void disassemble(void);
     int execute(Registers *reg);
 };
 class BrneInstruction : public Instruction {
@@ -54,7 +54,7 @@ public:
     : Instruction(regNumA, regNumB, regNumC){}
     ~BrneInstruction(void) {}
 
-    void disassemble(void){/* TBD */}
+    void disassemble(void);
     int execute(Registers *reg);
 };
 

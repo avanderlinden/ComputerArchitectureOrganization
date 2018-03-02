@@ -28,16 +28,29 @@ int AddInstruction::execute(Registers * reg) {
     return reg->getPC();
 }
 
+void AddInstruction::disassemble(void){
+    std::cout << "add\t $" << regA <<", $" << regB <<", $" << regC << "\n";
+}
+
 int SubInstruction::execute(Registers * reg) {
     reg->setRegister(regA, reg->getRegister(regB) - reg->getRegister(regC));
     reg->setPC(reg->getPC()+1);
     return reg->getPC();
 }
 
+void SubInstruction::disassemble(void){
+    std::cout << "sub\t $" << regA <<", $" << regB <<", $" << regC << "\n";
+}
+
 int OriInstruction::execute(Registers * reg) {
-    reg->setRegister(regA, reg->getRegister(regB) | reg->getRegister(regC));
+    std::cout << " -- or: " << (reg->getRegister(regB) | regC) << "\n";
+    reg->setRegister(regA, reg->getRegister(regB) | regC);
     reg->setPC(reg->getPC()+1);
     return reg->getPC();
+}
+
+void OriInstruction::disassemble(void){
+    std::cout << "ori\t $" << regA <<", $" << regB <<", " << regC << "\n";
 }
 
 int BrneInstruction::execute(Registers * reg) {
@@ -48,6 +61,10 @@ int BrneInstruction::execute(Registers * reg) {
         reg->setPC(reg->getPC()+1);
     }
     return reg->getPC();
+}
+
+void BrneInstruction::disassemble(void){
+    std::cout << "add\t $" << regA <<", $" << regB <<", " << regC << "\n";
 }
 
 

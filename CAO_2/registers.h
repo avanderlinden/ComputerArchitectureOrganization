@@ -57,13 +57,5 @@ private:
 
 };
 
-/*
- * Overloads the << operator for the class computer.
- * when << is called the content of the registers and program counter
- * are streamed to a ostream.
- *
- * @return ostream with the register content and program counter.
- */
-std::ostream& operator<<(std::ostream& out, const Registers& reg);
 
 #endif	/* _REGISTERS_H_ */

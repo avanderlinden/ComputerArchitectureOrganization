@@ -8,7 +8,7 @@ Registers::Registers ()
 {
 	for(int i = 0; i<32; i++)
 	{
-		this->setRegister(i,i);
+		this->setRegister(i,0);
 	}
 	program_counter = 0;
 }
@@ -54,15 +54,9 @@ int Registers::getPC()
 
 void Registers::print()
 {
-    std::cout << this;
-}
-
-std::ostream& operator<<(std::ostream& out, Registers& reg)
-{
-	out<<"ProgramCounter:" << reg.getPC() << "\n";
-	for(int i = 0; i<32; i++)
-	{
-		out<<"reg" << i << reg.getRegister(i) << "\n";
-	}
-    return out;
+    std::cout<<"ProgramCounter: " << this->getPC() << "\n";
+    for(int i = 0; i<32; i++)
+    {
+        std::cout<<"$" << i << "\t: " << this->getRegister(i) << "\n";
+    }
 }
