@@ -3,6 +3,7 @@
 
 #include "registers.h"
 #include "program.h"
+#include "instruction.h"
 
 class Simulator
 {

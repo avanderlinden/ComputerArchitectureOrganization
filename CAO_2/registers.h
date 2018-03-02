@@ -2,10 +2,17 @@
 #define _REGISTERS_H_
 
 #include <array>
+#include <ostream>
 
 class Registers
 {
 public:
+
+    /*
+     * Constructor
+     */
+    Registers();
+
 	/*
 	 * Sets register (0-31) to a integer value.
 	 *
@@ -45,7 +52,7 @@ public:
 
 
 private:
-	std::array<int,32> registers;
+	int reg[32];
 	int program_counter;
 
 };

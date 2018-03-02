@@ -3,19 +3,21 @@
 
 using namespace std;
 
+
 Registers::Registers ()
 {
 	for(int i = 0; i<32; i++)
 	{
-		this->setRegister(i,0);
+		this->setRegister(i,i);
 	}
+	program_counter = 0;
 }
 
-Registers::setRegister(int regNum, int value)
+void Registers::setRegister(int regNum, int value)
 {
-	if(regNum>0 and regNum<32)
+	if(regNum>=0 and regNum<32)
 	{
-
+	    this->reg[regNum] = value;
 	}
 	else
 	{
@@ -23,8 +25,39 @@ Registers::setRegister(int regNum, int value)
 	}
 }
 
+int Registers::getRegister(int regNum)
+{
+    if(regNum>=0 and regNum<32)
+    {
+        if (regNum == 0) {
+            return 0;
+        }
+        else {
+            return this->reg[regNum];
+        }
+    }
+    else
+    {
+        throw std::invalid_argument("");
+    }
+}
 
-std::ostream& operator<<(std::ostream& out, const Registers& reg)
+void Registers::setPC(int value)
+{
+    this->program_counter = value;
+}
+
+int Registers::getPC()
+{
+    return this->program_counter;
+}
+
+void Registers::print()
+{
+    std::cout << this;
+}
+
+std::ostream& operator<<(std::ostream& out, Registers& reg)
 {
 	out<<"ProgramCounter:" << reg.getPC() << "\n";
 	for(int i = 0; i<32; i++)
