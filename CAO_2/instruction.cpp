@@ -43,7 +43,6 @@ void SubInstruction::disassemble(void){
 }
 
 int OriInstruction::execute(Registers * reg) {
-    std::cout << " -- or: " << (reg->getRegister(regB) | regC) << "\n";
     reg->setRegister(regA, reg->getRegister(regB) | regC);
     reg->setPC(reg->getPC()+1);
     return reg->getPC();
