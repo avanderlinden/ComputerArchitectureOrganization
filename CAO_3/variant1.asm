@@ -63,10 +63,10 @@ exit_get:	move	$a0, $sp		# $a0=base address af the array
 		li	$v0, 4
 		syscall
 
-		move	$s1, $zero		# i=0
+print:		move	$s1, $zero		# i=0
 for_print:	bge	$s1, $s2, exit_print	# if i>=n go to exit_print
 		sll	$t0, $s1, 2		# $t0=i*4
-		add	$t1, $sp, $t0		# $t1=address of a[i]
+		add	$t1, $s3, $t0		# $t1=address of a[i]
 		lw	$a0, 0($t1)		#
 		li	$v0, 1			# print of the element a[i]
 		syscall				#
@@ -77,8 +77,51 @@ for_print:	bge	$s1, $s2, exit_print	# if i>=n go to exit_print
 		addi	$s1, $s1, 1		# i=i+1
 		j	for_print
 exit_print:	add	$sp, $sp, $s0		# elimination of the stack frame 
-              
+                jr $ra
+                
+                
+                
+
+		
+isort:				
+		move $s3, $a0
+		move $s4, $a1
+		jal  print
+		
+		move $a0, $s3
+		addi $a2, $zero, 0
+		addi $a3, $zero, 1
+		jal swap
+		
+		move $t0, $s3
+		jal  print
+		
+		move $t0, $zero			# i=0
+for_sort:	bge $t0, $s4, _for_sort		# if i > array length ($a1)
+		
+		
+		
+		
+		addi $t0, $t0, 1		# i++
+		j for_sort
+_for_sort:	
 		li	$v0, 10			# EXIT
 		syscall				#
+
+swap:		
+		sll $t0, $a2, 2
+		sll $t1, $a3, 2
 		
-isort:
+		add $t0, $t0, $a0
+		add $t1, $t1, $a0
+		
+		
+		lw $t2, 0($t0)
+		lw $t3, 0($t1)
+		
+		sw $t3, 0($t0)
+		sw $t2, 0($t1)
+		
+		jr $ra
+
+
