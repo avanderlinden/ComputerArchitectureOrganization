@@ -85,26 +85,43 @@ exit_print:	add	$sp, $sp, $s0		# elimination of the stack frame
 		
 isort:				
 		move $s3, $a0
-		move $s4, $a1
+		
 		jal  print
+		
+		la	$a0, str5 		# print \n
+		li	$v0, 4
+		syscall
+		
+		#move $t0, $s3
+		#jal  print
+		
+
+		
+		#move $s4, $a1
+		move $t8, $zero			# i=0
+for_sort:	bge $t8, $a1, _for_sort		# if i > array length ($a1)
 		
 		move $a0, $s3
-		addi $a2, $zero, 0
-		addi $a3, $zero, 1
+		move $a2, $t8
+		jal idx_min
+		
+		move $a3, $v0			# a3 = mini
+		move $a2, $t8			# a2 = i
+		move $a0, $s3			# a0 = v[0]
 		jal swap
 		
-		move $t0, $s3
-		jal  print
+		jal print
 		
-		move $t0, $zero			# i=0
-for_sort:	bge $t0, $s4, _for_sort		# if i > array length ($a1)
+		la	$a0, str5 		# print \n
+		li	$v0, 4
+		syscall
 		
-		
-		
-		
-		addi $t0, $t0, 1		# i++
+		addi $t8, $t8, 1		# i++
 		j for_sort
 _for_sort:	
+		move $a0, $s3
+		jal  print
+
 		li	$v0, 10			# EXIT
 		syscall				#
 
@@ -125,3 +142,30 @@ swap:
 		jr $ra
 
 
+idx_min:	subi $t9, $a1, 1 	# last=length-1
+		move $s5, $a2		#mini = first
+		
+		sll $t6, $s5, 2
+		add $t6, $t6, $a0
+		lw $s6, 0($t6)		# min = v[first]
+		
+		
+		addi $t4, $s5, 1	# i = first+1
+idx_for:	bge $t4, $t9, _idx_min  # if i > last then stop
+		
+		sll $t7, $t4, 2		
+		add $t7, $t7, $a0	# get v[i]
+		lw $s7, 0($t7)		
+		
+		addi $t4, $t4, 1	# i++
+		
+		bge $s7, $s6, idx_for	# if ( v[i] >= min ); continue
+		
+		move $s5, $t4		# mini = i
+		move $s6, $s7		# min = v[i]
+		
+		j idx_for
+		
+_idx_min:
+		move $v0, $s5		# return mini
+		jr $ra
