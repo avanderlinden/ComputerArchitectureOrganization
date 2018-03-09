@@ -110,12 +110,6 @@ for_sort:	bge $t8, $a1, _for_sort		# if i > array length ($a1)
 		move $a0, $s3			# a0 = v[0]
 		jal swap
 		
-		jal print
-		
-		la	$a0, str5 		# print \n
-		li	$v0, 4
-		syscall
-		
 		addi $t8, $t8, 1		# i++
 		j for_sort
 _for_sort:	
