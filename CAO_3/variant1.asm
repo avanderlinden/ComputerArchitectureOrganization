@@ -151,7 +151,7 @@ idx_min:	subi $t9, $a1, 1 	# last=length-1
 		
 		
 		addi $t4, $s5, 1	# i = first+1
-idx_for:	bge $t4, $t9, _idx_min  # if i > last then stop
+idx_for:	bgt $t4, $t9, _idx_min  # if i > last then stop
 		
 		sll $t7, $t4, 2		
 		add $t7, $t7, $a0	# get v[i]
@@ -161,7 +161,7 @@ idx_for:	bge $t4, $t9, _idx_min  # if i > last then stop
 		
 		bge $s7, $s6, idx_for	# if ( v[i] >= min ); continue
 		
-		move $s5, $t4		# mini = i
+		subi $s5, $t4, 1	# mini = i (compensate)
 		move $s6, $s7		# min = v[i]
 		
 		j idx_for
