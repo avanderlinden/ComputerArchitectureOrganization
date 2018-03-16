@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1520612635 source:/home/alex/projects/CAO/CAO_4/startup.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1520612635 /home/alex/projects/CAO/CAO_4/LPC13xx.h
+	"core_cm3.h"
+	"system_LPC13xx.h"
+
+1520612635 /home/alex/projects/CAO/CAO_4/core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1520612635 /home/alex/projects/CAO/CAO_4/system_LPC13xx.h
+	<stdint.h>
+
+1520612635 source:/home/alex/projects/CAO/CAO_4/system_LPC13xx.c
+	<stdint.h>
+	"LPC13xx.h"
+
