@@ -30,6 +30,19 @@
 		<Unit filename="LPC1343.ld" />
 		<Unit filename="LPC1343_usb.ld" />
 		<Unit filename="LPC13xx.h" />
+		<Unit filename="\\tudelft.net\student-homes\L\alexvanderlind\My Documents\projects\ComputerArchitectureOrganization\CAO_4\delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="\\tudelft.net\student-homes\L\alexvanderlind\My Documents\projects\ComputerArchitectureOrganization\CAO_4\delay.h">
+			<Option link="1" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="\\tudelft.net\student-homes\L\alexvanderlind\My Documents\projects\ComputerArchitectureOrganization\CAO_4\uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="\\tudelft.net\student-homes\L\alexvanderlind\My Documents\projects\ComputerArchitectureOrganization\CAO_4\uart.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="core_cm3.h" />
 		<Unit filename="core_cmFunc.h" />
 		<Unit filename="core_cmInstr.h" />
@@ -46,6 +59,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
