@@ -49,3 +49,16 @@
 	"LPC13xx.h"
 	"delay.h"
 
+1521724308 source:/home/alex/projects/CAO/CAO_4/main.c
+	"LPC13xx.h"
+	"delay.h"
+	"uart.h"
+
+1521725190 /home/alex/projects/CAO/CAO_4/delay.h
+
+1521724308 /home/alex/projects/CAO/CAO_4/uart.h
+	"LPC13xx.h"
+
+1521724308 source:/home/alex/projects/CAO/CAO_4/uart.c
+	"uart.h"
+

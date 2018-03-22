@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1520612635 source:/home/alex/projects/CAO/CAO_4/startup.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1520612635 /home/alex/projects/CAO/CAO_4/LPC13xx.h
+	"core_cm3.h"
+	"system_LPC13xx.h"
+
+1520612635 /home/alex/projects/CAO/CAO_4/core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1520612635 /home/alex/projects/CAO/CAO_4/system_LPC13xx.h
+	<stdint.h>
+
+1520612635 source:/home/alex/projects/CAO/CAO_4/system_LPC13xx.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1521210131 source:\\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\startup.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1521210131 \\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\lpc13xx.h
+	"core_cm3.h"
+	"system_LPC13xx.h"
+
+1521210131 \\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1521210131 \\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\system_lpc13xx.h
+	<stdint.h>
+
+1521210131 source:\\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\system_lpc13xx.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1521213055 source:\\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\main.c
+	"LPC13xx.h"
+	"delay.h"
+
+1521214014 \\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\delay.h
+
+1521214010 source:\\tudelft.net\student-homes\l\alexvanderlind\my documents\projects\computerarchitectureorganization\cao_4\delay.c
+	"LPC13xx.h"
+	"delay.h"
+
+1521724308 source:/home/alex/projects/CAO/CAO_4/main.c
+	"LPC13xx.h"
+	"delay.h"
+	"uart.h"
+
+1521725190 /home/alex/projects/CAO/CAO_4/delay.h
+
+1521724308 /home/alex/projects/CAO/CAO_4/uart.h
+	"LPC13xx.h"
+
+1521724308 source:/home/alex/projects/CAO/CAO_4/uart.c
+	"uart.h"
+
+1521727511 source:/home/alex/projects/CAO/CAO_4/4_2/delay.c
+	"LPC13xx.h"
+	"delay.h"
+
+1521727511 /home/alex/projects/CAO/CAO_4/4_2/LPC13xx.h
+	"core_cm3.h"
+	"system_LPC13xx.h"
+
+1521727511 /home/alex/projects/CAO/CAO_4/4_2/core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1521727511 /home/alex/projects/CAO/CAO_4/4_2/system_LPC13xx.h
+	<stdint.h>
+
+1521727511 /home/alex/projects/CAO/CAO_4/4_2/delay.h
+
+1521727511 source:/home/alex/projects/CAO/CAO_4/4_2/startup.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1521727511 source:/home/alex/projects/CAO/CAO_4/4_2/system_LPC13xx.c
+	<stdint.h>
+	"LPC13xx.h"
+
+1521727511 source:/home/alex/projects/CAO/CAO_4/4_2/uart.c
+	"uart.h"
+
+1521727511 /home/alex/projects/CAO/CAO_4/4_2/uart.h
+	"LPC13xx.h"
+
+1521739424 source:/home/alex/projects/CAO/CAO_4/4_2/main.c
+	"LPC13xx.h"
+	"delay.h"
+
