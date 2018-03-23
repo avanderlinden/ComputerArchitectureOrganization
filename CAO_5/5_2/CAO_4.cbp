@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CAO_5_2" />
+		<Option pch_mode="2" />
+		<Option compiler="arm-elf-gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="bin/Release/CAO_4.elf" prefix_auto="1" extension_auto="0" />
+				<Option type="1" />
+				<Option compiler="arm-elf-gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-mcpu=cortex-m3 -mthumb -std=gnu99 -I." />
+		</Compiler>
+		<Linker>
+			<Add option="-nostartfiles" />
+			<Add option="-T LPC1343.ld" />
+			<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="arm-none-eabi-objcopy -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
+			<Add after="arm-none-eabi-objcopy -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).bin" />
+			<Add after="lpc1343_checksum $(TARGET_OUTPUT_FILE).bin" />
+			<Add after="arm-none-eabi-size $(TARGET_OUTPUT_FILE)" />
+		</ExtraCommands>
+		<Unit filename="LPC1343.ld" />
+		<Unit filename="LPC1343_usb.ld" />
+		<Unit filename="LPC13xx.h" />
+		<Unit filename="core_cm3.h" />
+		<Unit filename="core_cmFunc.h" />
+		<Unit filename="core_cmInstr.h" />
+		<Unit filename="delay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="delay.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="startup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system_LPC13xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="system_LPC13xx.h" />
+		<Unit filename="uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="uart.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

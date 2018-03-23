@@ -8,7 +8,7 @@
 #define FALSE 0
 
 void init_led(){
-    LPC_GPIO3->DIR = LED1;
+    LPC_GPIO3->DIR |= LED1;
 }
 
 void led_on(){
@@ -16,7 +16,7 @@ void led_on(){
 }
 
 void led_off(){
-    LPC_GPIO3->DATA = LED1;
+    LPC_GPIO3->DATA |= LED1;
 }
 
 void led_inverse() {
@@ -56,6 +56,7 @@ int main(void)
 	{
         if(button1_pressed()){
             led_inverse();
+            delay_ms(25);
             while(button1_pressed());
             delay_ms(25);
         }

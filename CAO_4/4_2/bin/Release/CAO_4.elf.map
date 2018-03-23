@@ -2,150 +2,150 @@
 Memory Configuration
 
 Name             Origin             Length             Attributes
-sram             0x0000000010000000 0x0000000000002000
-flash            0x0000000000000000 0x0000000000008000
-*default*        0x0000000000000000 0xffffffffffffffff
+sram             0x10000000         0x00002000
+flash            0x00000000         0x00008000
+*default*        0x00000000         0xffffffff
 
 Linker script and memory map
 
-LOAD .objs/delay.o
-LOAD .objs/main.o
-LOAD .objs/startup.o
-LOAD .objs/system_LPC13xx.o
-LOAD .objs/uart.o
-LOAD /home/alex/toolchains/lpc1343/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libstdc++.a
-LOAD /home/alex/toolchains/lpc1343/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libm.a
+LOAD .objs\delay.o
+LOAD .objs\main.o
+LOAD .objs\startup.o
+LOAD .objs\system_LPC13xx.o
+LOAD .objs\uart.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6.2 2016q4/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/lib\libstdc++.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6.2 2016q4/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/lib\libm.a
 START GROUP
-LOAD /home/alex/toolchains/lpc1343/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/libgcc.a
-LOAD /home/alex/toolchains/lpc1343/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/libc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6.2 2016q4/bin/../lib/gcc/arm-none-eabi/6.2.1\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6.2 2016q4/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/lib\libc.a
 END GROUP
-                0x0000000010001ff0                _end_stack = 0x10001ff0
-                0x0000000000000000                . = ORIGIN (flash)
+                0x10001ff0                _end_stack = 0x10001ff0
+                0x00000000                . = ORIGIN (flash)
 
-vectors         0x0000000000000000      0x128
+vectors         0x00000000      0x128
  *(.vectors)
- .vectors       0x0000000000000000      0x128 .objs/startup.o
-                0x0000000000000000                vector_table
+ .vectors       0x00000000      0x128 .objs\startup.o
+                0x00000000                vector_table
 
-.text           0x0000000000000128      0x610
+.text           0x00000128      0x618
  *(.text.startup)
  *(.text .text*)
- .text          0x0000000000000128       0x80 .objs/delay.o
-                0x0000000000000128                init_delay
-                0x0000000000000168                delay_ms
-                0x000000000000017e                delay_us
- .text          0x00000000000001a8      0x100 .objs/main.o
-                0x00000000000001a8                init_led
-                0x00000000000001c4                led_on
-                0x00000000000001ec                led_off
-                0x0000000000000208                led_inverse
-                0x0000000000000230                init_button
-                0x000000000000024c                button1_pressed
-                0x0000000000000274                main
- .text          0x00000000000002a8       0x6c .objs/startup.o
-                0x00000000000002a8                Reset_Handler
-                0x000000000000030c                DebugMon_Handler
-                0x000000000000030c                HardFault_Handler
-                0x000000000000030c                SysTick_Handler
-                0x000000000000030c                PendSV_Handler
-                0x000000000000030c                NMI_Handler
-                0x000000000000030c                ADC_Handler
-                0x000000000000030c                BOD_Handler
-                0x000000000000030c                EINT3_Handler
-                0x000000000000030c                RESERVED_Handler
-                0x000000000000030c                UsageFault_Handler
-                0x000000000000030c                WDT_Handler
-                0x000000000000030c                TIMER_16_1_Handler
-                0x000000000000030c                Dummy_Handler
-                0x000000000000030c                WAKEUP_Handler
-                0x000000000000030c                I2C_Handler
-                0x000000000000030c                TIMER_32_0_Handler
-                0x000000000000030c                SSP_Handler
-                0x000000000000030c                MemManage_Handler
-                0x000000000000030c                SVC_Handler
-                0x000000000000030c                USB_FIQ_Handler
-                0x000000000000030c                EINT0_Handler
-                0x000000000000030c                UART_Handler
-                0x000000000000030c                EINT2_Handler
-                0x000000000000030c                USB_IRQ_Handler
-                0x000000000000030c                EINT1_Handler
-                0x000000000000030c                TIMER_16_0_Handler
-                0x000000000000030c                TIMER_32_1_Handler
-                0x000000000000030c                BusFault_Handler
- .text          0x0000000000000314      0x388 .objs/system_LPC13xx.o
-                0x0000000000000314                SystemCoreClockUpdate
-                0x0000000000000578                SystemInit
- .text          0x000000000000069c       0x9c .objs/uart.o
-                0x000000000000069c                uartWrite
-                0x00000000000006c8                initUART
+ .text          0x00000128       0x88 .objs\delay.o
+                0x00000128                init_delay
+                0x00000168                delay_ms
+                0x0000017c                delay_us
+ .text          0x000001b0      0x100 .objs\main.o
+                0x000001b0                init_led
+                0x000001cc                led_on
+                0x000001f4                led_off
+                0x00000210                led_inverse
+                0x00000238                init_button
+                0x00000254                button1_pressed
+                0x0000027c                main
+ .text          0x000002b0       0x6c .objs\startup.o
+                0x000002b0                Reset_Handler
+                0x00000314                HardFault_Handler
+                0x00000314                SysTick_Handler
+                0x00000314                PendSV_Handler
+                0x00000314                NMI_Handler
+                0x00000314                ADC_Handler
+                0x00000314                BOD_Handler
+                0x00000314                EINT3_Handler
+                0x00000314                RESERVED_Handler
+                0x00000314                UsageFault_Handler
+                0x00000314                WDT_Handler
+                0x00000314                TIMER_16_1_Handler
+                0x00000314                DebugMon_Handler
+                0x00000314                Dummy_Handler
+                0x00000314                WAKEUP_Handler
+                0x00000314                I2C_Handler
+                0x00000314                TIMER_32_0_Handler
+                0x00000314                SSP_Handler
+                0x00000314                MemManage_Handler
+                0x00000314                SVC_Handler
+                0x00000314                USB_FIQ_Handler
+                0x00000314                EINT0_Handler
+                0x00000314                UART_Handler
+                0x00000314                EINT2_Handler
+                0x00000314                USB_IRQ_Handler
+                0x00000314                EINT1_Handler
+                0x00000314                TIMER_16_0_Handler
+                0x00000314                TIMER_32_1_Handler
+                0x00000314                BusFault_Handler
+ .text          0x0000031c      0x388 .objs\system_LPC13xx.o
+                0x0000031c                SystemCoreClockUpdate
+                0x00000580                SystemInit
+ .text          0x000006a4       0x9c .objs\uart.o
+                0x000006a4                uartWrite
+                0x000006d0                initUART
  *(.rodata)
  *(.rodata*)
-                0x0000000000000738                _end_text = .
+                0x00000740                _end_text = .
 
-.glue_7         0x0000000000000738        0x0
- .glue_7        0x0000000000000738        0x0 linker stubs
+.glue_7         0x00000740        0x0
+ .glue_7        0x00000740        0x0 linker stubs
 
-.glue_7t        0x0000000000000738        0x0
- .glue_7t       0x0000000000000738        0x0 linker stubs
+.glue_7t        0x00000740        0x0
+ .glue_7t       0x00000740        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000738        0x0
- .vfp11_veneer  0x0000000000000738        0x0 linker stubs
+.vfp11_veneer   0x00000740        0x0
+ .vfp11_veneer  0x00000740        0x0 linker stubs
 
-.v4_bx          0x0000000000000738        0x0
- .v4_bx         0x0000000000000738        0x0 linker stubs
+.v4_bx          0x00000740        0x0
+ .v4_bx         0x00000740        0x0 linker stubs
 
-.iplt           0x0000000000000738        0x0
- .iplt          0x0000000000000738        0x0 .objs/delay.o
+.iplt           0x00000740        0x0
+ .iplt          0x00000740        0x0 .objs\delay.o
 
-.rel.dyn        0x0000000000000738        0x0
- .rel.iplt      0x0000000000000738        0x0 .objs/delay.o
+.rel.dyn        0x00000740        0x0
+ .rel.iplt      0x00000740        0x0 .objs\delay.o
 
-.data           0x0000000010000000        0xc load address 0x0000000000000738
-                0x0000000010000000                _start_data = .
+.data           0x10000000        0xc load address 0x00000740
+                0x10000000                _start_data = .
  *(.data)
- .data          0x0000000010000000        0x8 .objs/delay.o
- .data          0x0000000010000008        0x0 .objs/main.o
- .data          0x0000000010000008        0x0 .objs/startup.o
- .data          0x0000000010000008        0x4 .objs/system_LPC13xx.o
-                0x0000000010000008                SystemCoreClock
- .data          0x000000001000000c        0x0 .objs/uart.o
-                0x000000001000000c                _end_data = .
+ .data          0x10000000        0x8 .objs\delay.o
+ .data          0x10000008        0x0 .objs\main.o
+ .data          0x10000008        0x0 .objs\startup.o
+ .data          0x10000008        0x4 .objs\system_LPC13xx.o
+                0x10000008                SystemCoreClock
+ .data          0x1000000c        0x0 .objs\uart.o
+                0x1000000c                _end_data = .
 
-.igot.plt       0x000000001000000c        0x0 load address 0x0000000000000744
- .igot.plt      0x000000001000000c        0x0 .objs/delay.o
+.igot.plt       0x1000000c        0x0 load address 0x0000074c
+ .igot.plt      0x1000000c        0x0 .objs\delay.o
 
-.bss            0x000000001000000c        0x4 load address 0x0000000000000744
-                0x000000001000000c                _start_bss = .
+.bss            0x1000000c        0x4 load address 0x0000074c
+                0x1000000c                _start_bss = .
  *(.bss)
- .bss           0x000000001000000c        0x4 .objs/delay.o
- .bss           0x0000000010000010        0x0 .objs/main.o
- .bss           0x0000000010000010        0x0 .objs/startup.o
- .bss           0x0000000010000010        0x0 .objs/system_LPC13xx.o
- .bss           0x0000000010000010        0x0 .objs/uart.o
-                0x0000000010000010                _end_bss = .
-                0x0000000010000010                . = ALIGN (0x4)
-                0x0000000010000010                _start_stack = .
-                0x0000000010000010                _end = .
-                [!provide]                        PROVIDE (end, .)
-OUTPUT(bin/Release/CAO_4.elf elf32-littlearm)
+ .bss           0x1000000c        0x4 .objs\delay.o
+ .bss           0x10000010        0x0 .objs\main.o
+ .bss           0x10000010        0x0 .objs\startup.o
+ .bss           0x10000010        0x0 .objs\system_LPC13xx.o
+ .bss           0x10000010        0x0 .objs\uart.o
+                0x10000010                _end_bss = .
+                0x10000010                . = ALIGN (0x4)
+                0x10000010                _start_stack = .
+                0x10000010                _end = .
+                [!provide]                PROVIDE (end, .)
+OUTPUT(bin\Release\CAO_4.elf elf32-littlearm)
 
-.comment        0x0000000000000000       0x7e
- .comment       0x0000000000000000       0x7e .objs/delay.o
-                                         0x7f (size before relaxing)
- .comment       0x000000000000007e       0x7f .objs/main.o
- .comment       0x000000000000007e       0x7f .objs/startup.o
- .comment       0x000000000000007e       0x7f .objs/system_LPC13xx.o
- .comment       0x000000000000007e       0x7f .objs/uart.o
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e .objs\delay.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f .objs\main.o
+ .comment       0x0000006e       0x6f .objs\startup.o
+ .comment       0x0000006e       0x6f .objs\system_LPC13xx.o
+ .comment       0x0000006e       0x6f .objs\uart.o
 
 .ARM.attributes
-                0x0000000000000000       0x33
+                0x00000000       0x33
  .ARM.attributes
-                0x0000000000000000       0x33 .objs/delay.o
+                0x00000000       0x33 .objs\delay.o
  .ARM.attributes
-                0x0000000000000033       0x33 .objs/main.o
+                0x00000033       0x33 .objs\main.o
  .ARM.attributes
-                0x0000000000000066       0x33 .objs/startup.o
+                0x00000066       0x33 .objs\startup.o
  .ARM.attributes
-                0x0000000000000099       0x33 .objs/system_LPC13xx.o
+                0x00000099       0x33 .objs\system_LPC13xx.o
  .ARM.attributes
-                0x00000000000000cc       0x33 .objs/uart.o
+                0x000000cc       0x33 .objs\uart.o

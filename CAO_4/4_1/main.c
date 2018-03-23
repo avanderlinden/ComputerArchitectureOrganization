@@ -4,15 +4,18 @@
 #define LED1 (1<<0)
 
 void init_led(){
-    LPC_GPIO3->DIR = LED1;
+    //LPC_GPIO3->DIR = LED1;
+    *(volatile uint32_t *) 0x50038000 = LED1;
 }
 
 void led_on(){
-    LPC_GPIO3->DATA = LED1;
+    //LPC_GPIO3->DATA = LED1;
+    *(volatile uint32_t *) 0x50033FFC = LED1;
 }
 
 void led_off(){
-    LPC_GPIO3->DATA = LPC_GPIO3->DATA & (~LED1);
+    //LPC_GPIO3->DATA = LPC_GPIO3->DATA & (~LED1);
+    *(volatile uint32_t *) 0x50033FFC = 0x0;
 }
 
 int main(void)
