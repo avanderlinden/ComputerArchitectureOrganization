@@ -1,0 +1,53 @@
+
+### Homework Assignment 3.1:
+
+## hardware:
+
+Q: Which pin is connected to SDA?
+A: PIO0_5/SDA : pin 16
+
+Q: Which pin is connected to SCL?
+A: PIO0_4/SCL : pin 15
+
+## software:
+
+Q: What line of code would you use to set the Start flag (STA)?
+A: LPC_I2C->CONSET |= (1<<5); // start I2C master mode
+
+Q: What line of code would you use to clear the I2C interrupt flag?
+A: LPC_I2C->CONCLR |= (1<<3);
+
+Q: Which register is used for reading or writing data?
+A: int data = LPC_I2C->DAT;
+
+Q: The SI flag can be polled to check if a I2C event has occurred. What line of code would you use to wait for a I2C event?
+A: while(!(LPC_I2C->CONSET & (1<<6) ));
+
+
+### Homework Assignment 3.2
+
+Q: The address of the TMP102 is configurable via the ADD0 pin. On the PCB, this
+pin is connected to GND. Determine the real address and the derived read and
+write addresses (in hexadecimal).
+A: 1001000 (Table 4)
+
+Q: By default, the TMP102 uses a 12-bit format to represent the temperature. Using this 12-bit format, what will be the representation of -12 ◦C and 30 ◦C?
+A: 30◦C / 0.0625◦C = 480 = 0001 1110 0000
+A: -12◦C / 0.0625◦C = 192 = 1111 01000000 (two's compliment)
+
+Q: In the default 12-bit format, which temperatures are represented by the numbers 0010 1010 1001 and 1101 0100 1000?
+A: 681 * 0.0625◦C = 42.56◦C
+A: -696 * 0.0625◦C = -43.5◦C
+
+
+Q: How many bits of the 12-bit result are sufficient to represent the temperature truncated to whole numbers?
+A: 1/0.0625 = 16
+ : 2^16 / 16 = 256
+ : 2^log(254) = 8
+ : so 8-bit
+
+ 
+
+
+
+
