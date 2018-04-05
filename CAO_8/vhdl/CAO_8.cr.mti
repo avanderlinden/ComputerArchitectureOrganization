@@ -1,0 +1,87 @@
+/home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alucontrol
+-- Compiling architecture behavior of alucontrol
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pc
+-- Compiling architecture behavior of pc
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture behavior of memory
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity registers
+-- Compiling architecture behavior of registers
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity jump
+-- Compiling architecture behavior of jump
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity extend
+-- Compiling architecture behavior of extend
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/control.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/control.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control
+-- Compiling architecture behavior of control
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mips
+-- Compiling architecture behavior of mips
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/memory.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/memory.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture behavior of memory
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mips_tb
+-- Compiling architecture behaviour of mips_tb
+
+} {} {}}

@@ -1,0 +1,412 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/alex/.local/share/Trash/files/CAO_8
+Ealu
+Z0 w1522961823
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 d/home/alex/projects/CAO/CAO_8/vhdl
+Z5 8/home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl
+Z6 F/home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl
+l0
+L5
+VCK;;0c4YU;T_Y9S:0=zz]2
+!s100 9UHWeTZf[VkO;G9jjj:XZ3
+Z7 OV;C;10.5c;63
+32
+Z8 !s110 1522961838
+!i10b 1
+Z9 !s108 1522961838.000000
+Z10 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl|
+Z11 !s107 /home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl|
+!i113 1
+Z12 o-work CAO_8 -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 CK;;0c4YU;T_Y9S:0=zz]2
+l23
+L19
+VGENPj8W^bX6dBjj]c9c6N3
+!s100 TPbCIV[_fD4nzQA9f^dXO3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealucontrol
+Z14 w1522960310
+R2
+R3
+R4
+Z15 8/home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl
+Z16 F/home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl
+l0
+L4
+VSil;PDb[UTzT?:EDP0gH`2
+!s100 Z?G40[6<<SG8lajTAn[il0
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl|
+Z18 !s107 /home/alex/projects/CAO/CAO_8/vhdl/alucontrol.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 10 alucontrol 0 22 Sil;PDb[UTzT?:EDP0gH`2
+l16
+L15
+VP:4zaMN7`P1[d:Y2PZ`Z_1
+!s100 QG<fSVbAf4R@eKSGUG^1z0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Econtrol
+Z19 w1522960297
+R2
+R3
+R4
+Z20 8/home/alex/projects/CAO/CAO_8/vhdl/control.vhdl
+Z21 F/home/alex/projects/CAO/CAO_8/vhdl/control.vhdl
+l0
+L4
+VcoPnc8zi<Dbh4:E@@ZcK43
+!s100 ;F3_?z9ZRK[JN<AK85=]i1
+R7
+32
+Z22 !s110 1522961839
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/control.vhdl|
+Z24 !s107 /home/alex/projects/CAO/CAO_8/vhdl/control.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 7 control 0 22 coPnc8zi<Dbh4:E@@ZcK43
+l21
+L20
+Ve_o7Z6kmDj7K:[fbaV17@2
+!s100 B:ZBnR10_IO<hzF9`Kb;>3
+R7
+32
+R22
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Eextend
+Z25 w1389006421
+R2
+R3
+R4
+Z26 8/home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl
+Z27 F/home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl
+l0
+L4
+Vg1[g2lX;>N6R]6[Wh;D?20
+!s100 ^olnm165gmP>W@ZMoB<a_3
+R7
+32
+R22
+!i10b 1
+Z28 !s108 1522961839.000000
+Z29 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl|
+Z30 !s107 /home/alex/projects/CAO/CAO_8/vhdl/extend.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 6 extend 0 22 g1[g2lX;>N6R]6[Wh;D?20
+l15
+L13
+VkSh9Z?F^G^aXYOTljGgaO3
+!s100 Z5oe=8;iC2iIZC21lOQ^;1
+R7
+32
+R22
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Ejump
+Z31 w1395312230
+R1
+R2
+R3
+R4
+Z32 8/home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl
+Z33 F/home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl
+l0
+L5
+V^GZ[9f=G<iNZB;OJ6j]740
+!s100 lX1YU@ahZF;LU^3okokcH2
+R7
+32
+R22
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl|
+Z35 !s107 /home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 4 jump 0 22 ^GZ[9f=G<iNZB;OJ6j]740
+l21
+L19
+V@Z=kEkb?[KX<jKd:40X9J0
+!s100 ]OjC30HA6mLCOmfdjoCSn0
+R7
+32
+R22
+!i10b 1
+R28
+R34
+R35
+!i113 1
+R12
+R13
+Ememory
+Z36 w1522960354
+R1
+R2
+R3
+R4
+Z37 8/home/alex/projects/CAO/CAO_8/vhdl/test.vhdl
+Z38 F/home/alex/projects/CAO/CAO_8/vhdl/test.vhdl
+l0
+L5
+VLkUd1Ni1e:cz_j:l4`CHP3
+!s100 binHQm[S:G9bP:lGF<4KK2
+R7
+32
+Z39 !s110 1522961840
+!i10b 1
+Z40 !s108 1522961840.000000
+Z41 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/test.vhdl|
+Z42 !s107 /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+Z43 DEx4 work 6 memory 0 22 LkUd1Ni1e:cz_j:l4`CHP3
+l25
+L20
+V]L@NkWbi6Peil;mGQXnC62
+!s100 j`K_m>ZncUmbFSnUEF9JL1
+R7
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R12
+R13
+Emips
+Z44 w1522955115
+R1
+R2
+R3
+R4
+Z45 8/home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl
+Z46 F/home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl
+l0
+L5
+V@FG1Z^8T_D>nLP2>@bWfg1
+!s100 WIhP2D^H9jZ]f2^c7EUBY1
+R7
+32
+R22
+!i10b 1
+R28
+Z47 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl|
+Z48 !s107 /home/alex/projects/CAO/CAO_8/vhdl/mips.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 4 mips 0 22 @FG1Z^8T_D>nLP2>@bWfg1
+l126
+L13
+VXTa54`ASM^]zlE1]@WNBf3
+!s100 Elo5VGnb6BTCVVI7g0[]Z3
+R7
+32
+R22
+!i10b 1
+R28
+R47
+R48
+!i113 1
+R12
+R13
+Emips_tb
+R25
+R2
+R3
+R4
+Z49 8/home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl
+Z50 F/home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl
+l0
+L4
+VSc1TVgB_MANQQPdGj3]S31
+!s100 VmfDZ1X=N<1n?g3MO?IDL3
+R7
+32
+R22
+!i10b 1
+R28
+Z51 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl|
+Z52 !s107 /home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl|
+!i113 1
+R12
+R13
+Abehaviour
+R2
+R3
+DEx4 work 7 mips_tb 0 22 Sc1TVgB_MANQQPdGj3]S31
+l20
+L7
+V2JobGjM<RV0TGPgJDOD>d3
+!s100 ^nai?7<cAD_7<M4<M?]nF0
+R7
+32
+R22
+!i10b 1
+R28
+R51
+R52
+!i113 1
+R12
+R13
+Epc
+R25
+R1
+R2
+R3
+R4
+Z53 8/home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl
+Z54 F/home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl
+l0
+L5
+V@[OP2YNoPb8U4_?z<^^@V3
+!s100 z[S0JLgRle:Pd73L1EEjE0
+R7
+32
+R22
+!i10b 1
+R28
+Z55 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl|
+Z56 !s107 /home/alex/projects/CAO/CAO_8/vhdl/pc.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 @[OP2YNoPb8U4_?z<^^@V3
+l19
+L17
+V];N7lhJED4H2fld3O<Y4K3
+!s100 gc?_2@IN0kzY2J4eCVjD^3
+R7
+32
+R22
+!i10b 1
+R28
+R55
+R56
+!i113 1
+R12
+R13
+Eregisters
+Z57 w1522954113
+R1
+R2
+R3
+R4
+Z58 8/home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl
+Z59 F/home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl
+l0
+L5
+V[>EO3O>7_A:jn2?hKVG0;3
+!s100 zSE=3`V7zBDEz;:H4dD]_0
+R7
+32
+R39
+!i10b 1
+R28
+Z60 !s90 -reportprogress|300|-work|CAO_8|-2002|-explicit|-stats=none|/home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl|
+Z61 !s107 /home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 9 registers 0 22 [>EO3O>7_A:jn2?hKVG0;3
+l25
+L21
+VY]BkJ03Ak5P;ZA[V1GHL10
+!s100 1GgolGhT:1Q1>9d?9h`Ef0
+R7
+32
+R39
+!i10b 1
+R28
+R60
+R61
+!i113 1
+R12
+R13

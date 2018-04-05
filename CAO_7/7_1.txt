@@ -29,7 +29,7 @@ A: while(!(LPC_I2C->CONSET & (1<<6) ));
 Q: The address of the TMP102 is configurable via the ADD0 pin. On the PCB, this
 pin is connected to GND. Determine the real address and the derived read and
 write addresses (in hexadecimal).
-A: 1001000 (Table 4)
+A: 1001000 (Table 12)
 
 Q: By default, the TMP102 uses a 12-bit format to represent the temperature. Using this 12-bit format, what will be the representation of -12 ◦C and 30 ◦C?
 A: 30◦C / 0.0625◦C = 480 = 0001 1110 0000
