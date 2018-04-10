@@ -40,14 +40,15 @@ component control
 	(
 		instruction	: in  std_logic_vector (5 downto 0);
 		funct		: in  std_logic_vector (5 downto 0);
-		branch		: out std_logic_vector (1 downto 0);
+		branch		: out std_logic_vector (2 downto 0);
 		regdst		: out std_logic;
 		memread		: out std_logic;
 		memtoreg	: out std_logic;
 		aluop		: out std_logic_vector (2 downto 0);
 		memwrite	: out std_logic;
 		alusrc		: out std_logic;
-		regwrite	: out std_logic
+		regwrite	: out std_logic;
+		jalsig		: out std_logic
 	);
 end component;
 
@@ -64,13 +65,15 @@ component jump
 	port
 	(
 		branchalu	: in  std_logic;
-		branchcontrol	: in  std_logic_vector ( 1 downto 0);
+		branchcontrol	: in  std_logic_vector ( 2 downto 0);
 		extend		: in  std_logic_vector (31 downto 0);
 		jump		: in  std_logic_vector (25 downto 0);
 		registers	: in  std_logic_vector (31 downto 0);
 		current		: in  std_logic_vector (31 downto 0);
 		branch		: out std_logic;
-		address		: out std_logic_vector (31 downto 0)
+		address		: out std_logic_vector (31 downto 0);
+		writereg	: out std_logic_vector (4 downto 0);
+		writedata	: out std_logic_vector (31 downto 0)
 	);
 end component;
 
@@ -109,19 +112,19 @@ component registers
 		regwrite	: in  std_logic;
 		readreg1	: in  std_logic_vector ( 4 downto 0);
 		readreg2	: in  std_logic_vector ( 4 downto 0);
-		writereg	: in  std_logic_vector ( 4 downto 0);
-		writedata	: in  std_logic_vector (31 downto 0);
+		writereg			: in  std_logic_vector ( 4 downto 0);
+		writedata			: in  std_logic_vector (31 downto 0);
 		readdata1	: out std_logic_vector (31 downto 0);
 		readdata2	: out std_logic_vector (31 downto 0)
 	);
 end component;
 
-	signal branch, branchalu, regwrite, regdst, memread, memtoreg, memwrite, alusrc : std_logic;
-	signal branchcontrol	: std_logic_vector (1 downto 0);
+	signal branch, branchalu, jalsel, regwrite, regdst, memread, memtoreg, memwrite, alusrc : std_logic;
+	signal branchcontrol	: std_logic_vector (2 downto 0);
 	signal aluop		: std_logic_vector (2 downto 0);
 	signal aluinstr		: std_logic_vector (4 downto 0);
-	signal writereg		: std_logic_vector (4 downto 0);
-	signal branchaddress, extended, instruction, readdata1, readdata2, memorydata, current_pc, add_pc, writedata, result, aludatasel	: std_logic_vector (31 downto 0);
+	signal writereg, writeregjal : std_logic_vector (4 downto 0);
+	signal branchaddress, extended, instruction, readdata1, readdata2, memorydata, current_pc, add_pc, writedata, writedatajal, result, aludatasel	: std_logic_vector (31 downto 0);
 
 begin
 	with regdst select
@@ -135,6 +138,19 @@ begin
 	with alusrc select
 		aludatasel <=	extended			when '1',
 				readdata2			when others;
+	
+	
+	
+	
+	with jalsel select
+		writeregjal <= "11111" when '1',
+		writereg 	when others;
+		
+	with jalsel select 
+		writedatajal <= add_pc when '1',
+		writedata	when others;
+		
+		
 
 pcmap:		pc		port map (	clk		=> clk,
 						rst		=> rst,
@@ -164,8 +180,8 @@ registersmap:	registers	port map (	clk		=> clk,
 						regwrite	=> regwrite,
 						readreg1	=> instruction (25 downto 21),
 						readreg2	=> instruction (20 downto 16),
-						writereg	=> writereg,
-						writedata	=> writedata,
+						writereg	=> writeregjal,
+						writedata	=> writedatajal,
 						readdata1	=> readdata1,
 						readdata2	=> readdata2
 				);
@@ -190,7 +206,8 @@ controlmap:	control		port map (	instruction	=> instruction (31 downto 26),
 						aluop		=> aluop,
 						memwrite	=> memwrite,
 						alusrc		=> alusrc,
-						regwrite	=> regwrite
+						regwrite	=> regwrite,
+						jalsig		=> jalsel
 				);
 
 alucontrolmap:	alucontrol	port map (	aluop		=> aluop,

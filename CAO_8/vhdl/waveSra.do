@@ -1,5 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate /mips_tb/mips_0/registersmap/registers
 add wave -noupdate /mips_tb/mips_0/clk
 add wave -noupdate /mips_tb/mips_0/controlmap/instruction
 add wave -noupdate /mips_tb/mips_0/alucontrolmap/instruction
@@ -7,6 +8,7 @@ add wave -noupdate -radix decimal /mips_tb/mips_0/alumap/data1
 add wave -noupdate -radix decimal /mips_tb/mips_0/alumap/data2
 add wave -noupdate -radix decimal /mips_tb/mips_0/alumap/result
 add wave -noupdate /mips_tb/mips_0/alumap/sraBit
+add wave -noupdate /mips_tb/mips_0/jalsel
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {21246 ps} 0}
 quietly wave cursor active 1

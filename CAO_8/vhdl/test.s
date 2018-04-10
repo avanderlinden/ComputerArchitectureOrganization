@@ -16,7 +16,9 @@ B:
 	addi	$3,$0,42	# $3=42
 	addiu	$4,$3,-6	# $4=36
 
-	jr	$4		# skip
+	jal	B		# skip
+	
+
 C:
 	j	C		# 			loop
 	add	$5,$4,$3	# $5=78

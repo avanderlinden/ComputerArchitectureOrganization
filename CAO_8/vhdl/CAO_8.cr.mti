@@ -15,15 +15,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Compiling entity pc
 -- Compiling architecture behavior of pc
 
-} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity memory
--- Compiling architecture behavior of memory
-
 } {} {}} /home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/registers.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
 -- Loading package STANDARD
@@ -32,6 +23,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Loading package NUMERIC_STD
 -- Compiling entity registers
 -- Compiling architecture behavior of registers
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/test.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture behavior of memory
 
 } {} {}} /home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/jump.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
@@ -75,6 +75,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 2
 -- Loading package NUMERIC_STD
 -- Compiling entity memory
 -- Compiling architecture behavior of memory
+
+} {} {}} /home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/alu.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture behavior of alu
 
 } {} {}} /home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl {1 {vcom -work CAO_8 -2002 -explicit -stats=none /home/alex/projects/CAO/CAO_8/vhdl/mips_tb.vhdl
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017

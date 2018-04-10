@@ -26,7 +26,7 @@ begin
 	selector1 <= to_integer (unsigned (readreg1));
 	selector2 <= to_integer (unsigned (readreg2));
 	selector3 <= to_integer (unsigned (writereg));
-
+	
 	process (clk, rst, regwrite, readreg1, readreg2, writereg, writedata)
 	begin
 		if (rising_edge (clk)) then

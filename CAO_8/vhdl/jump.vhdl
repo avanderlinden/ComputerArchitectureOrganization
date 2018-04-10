@@ -6,13 +6,15 @@ entity jump is
 	port
 	(
 		branchalu		: in  std_logic;
-		branchcontrol		: in  std_logic_vector (1 downto 0);
+		branchcontrol		: in  std_logic_vector (2 downto 0);
 		extend			: in  std_logic_vector (31 downto 0);
 		jump			: in  std_logic_vector (25 downto 0);
 		registers		: in  std_logic_vector (31 downto 0);
 		current			: in  std_logic_vector (31 downto 0);
 		branch			: out std_logic;
-		address			: out std_logic_vector (31 downto 0)
+		address			: out std_logic_vector (31 downto 0);
+		writereg		: out std_logic_vector (4 downto 0);
+		writedata		: out std_logic_vector (31 downto 0)
 	);
 end jump;
 
@@ -23,13 +25,18 @@ begin
 	process (branchalu, branchcontrol, extend, jump, registers, current, addresscalc)
 	begin
 		case branchcontrol is
-			when "01" =>		-- j
+			when "001" =>		-- j
 				branch	<= '1';
 				address	<= current (31 downto 28) & jump & "00";
-			when "10" =>		-- jr
+			when "010" =>		-- jr
 				branch	<= '1';
 				address	<= registers;
-			when "11" =>		-- branch instruction
+			when "100" => 		-- jal
+				branch <= '1';
+				address	<= current (31 downto 28) & jump & "00";
+				--writereg <= "11111";
+				writedata <= current;
+			when "011" =>		-- branch instruction
 				branch	<= branchalu;
 				address	<= std_logic_vector (addresscalc);
 			when others =>
